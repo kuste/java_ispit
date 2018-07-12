@@ -11,18 +11,24 @@ public class App {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Unesite broj elemenata liste izmedju 7 i 20: ");
 
-		int br = input.nextInt();
-		if (br < 7 || br > 20 || ) {
-			System.out.println("bla");
+		if (input.hasNextInt()) {
+
+			int br = input.nextInt();
+			if (br < 7 || br > 20) {
+				System.out.println("bla");
+			} else {
+				LinkedHashSet<Integer> lista = gen.genNum(br);
+
+				System.out.println("Originalna lista:\n" + lista);
+
+				ans.sortAscList(lista);
+				ans.sortDescList(lista);
+				ans.calcAvgList(lista);
+			}
 		} else {
-			LinkedHashSet<Integer> lista = gen.genNum(br);
-
-			System.out.println("Originalna lista:\n" + lista);
-
-			ans.sortAscList(lista);
-			ans.sortDescList(lista);
-			ans.calcAvgList(lista);
+			System.out.println("aaaaaa");
 		}
+
 	}
 
 }

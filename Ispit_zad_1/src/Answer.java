@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -29,7 +31,7 @@ public class Answer {
 			}
 		});
 		sorted.addAll(lista);
-
+		
 		System.out.println("Silazno sortirane:\n" + sorted);
 
 	}
